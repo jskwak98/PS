@@ -3,6 +3,13 @@ from copy import deepcopy
 
 
 def check(teachers, obstacles):
+    """
+    You have students checked by teacher in teachers dictionary, key : teacher, value : students set
+    by checking obstacles are in between students and teacher, you erase them from
+    deep copied dictionary ts.
+    at final, if you check there's no one left in ts, the obstacles have
+    successfully hindered teachers' sights
+    """
     ts = deepcopy(teachers)
     for obstacle in obstacles:
         for teacher in teachers:
@@ -20,6 +27,13 @@ def check(teachers, obstacles):
 
 
 def solution():
+    """
+    I've made candidates for obstacle positions, then went through all 3 combinations
+    of those candidates. For speed and efficiency I've checked if there's case that
+    teacher is adjacent to student. In such case it's trivial that obstacle cannot
+    hinder teacher's sight.
+    teachers is dictionary consisted of key : teacher and values : set of students being watched by the teacher
+    """
     n = int(input())
     board = []
     teachers = dict()
@@ -66,3 +80,28 @@ def solution():
 
 
 solution()
+
+"""
+example
+
+input
+5
+X S X X T
+T X S X X
+X X X X X
+X T X X X
+X X T X X
+
+output
+YES
+
+input
+4
+S S S T
+X X X X
+X X X X
+T T T X
+
+output
+NO
+"""

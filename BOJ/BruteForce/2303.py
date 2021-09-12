@@ -11,8 +11,11 @@ def solution():
     max_sum = -1
     for i in range(1, n+1):
         cards = list(map(int, input().split()))
-        if three_max(cards) >= max_sum:
+        cur_max = three_max(cards)
+        if cur_max >= max_sum:
+            max_sum = cur_max
             ans = i
     print(i)
+
 
 solution()

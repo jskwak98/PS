@@ -15,7 +15,7 @@ def solution():
         if cur_max >= max_sum:
             max_sum = cur_max
             ans = i
-    print(i)
+    print(ans)
 
 
 solution()

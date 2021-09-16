@@ -24,3 +24,15 @@ def solution():
 
 
 solution()
+
+"""
+input
+800 899
+output
+1
+
+input
+8808 8880
+output
+2
+"""

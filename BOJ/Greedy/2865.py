@@ -9,6 +9,7 @@ def solution():
         for i in range(0, 2 * m, 2):
             participant, score = int(data[i]), float(data[i + 1])
             if bests[participant] < score:
+                # for each participant, you only consider their best score
                 bests[participant] = score
     print(round(sum(sorted(bests.values(), reverse=True)[:k]), 1))
 

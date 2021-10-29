@@ -38,3 +38,6 @@ def solution():
 
 if __name__ == "__main__":
     solution()
+
+# input = sys.stdin.readline
+# 으로 바꿔서 하는 버릇을 들이자.
